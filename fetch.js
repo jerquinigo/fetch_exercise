@@ -21,9 +21,9 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log(innerRes);
       // debugger;
       let mainDiv = document.querySelector(".mainDiv");
-        let p = document.createElement("p");
-        p.innerText = innerRes.message;
-        mainDiv.appendChild(p);
+        let img = document.createElement("img");
+        img.src = innerRes.message;
+        mainDiv.appendChild(img);
       });
     });
 });
