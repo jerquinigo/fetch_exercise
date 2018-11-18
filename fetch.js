@@ -1,11 +1,11 @@
-/*## Step 1: Refactorin'
-
-Copy your Random Dog Image app and adjust it to use `fetch` instead of `XMLHttpRequest`. You shouldn't have to change any of your DOM stuff to complete this - all of your refactoring should be inside your button listener.
-*/
+//jonathan.e
 
 document.addEventListener("DOMContentLoaded", () => {
   let body = document.querySelector("body");
   let button = document.querySelector(".button1");
+  let img = document.createElement("img")
+  document.body.appendChild(img);
+  img.style.width = "50%";
 
   button.addEventListener("click", () => {
   fetch("https://dog.ceo/api/breeds/image/random")
@@ -20,10 +20,10 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(innerRes => {
       console.log(innerRes);
       // debugger;
-      let mainDiv = document.querySelector(".mainDiv");
-        let img = document.createElement("img");
+      // let mainDiv = document.querySelector(".mainDiv");
+        ;
         img.src = innerRes.message;
-        mainDiv.appendChild(img);
+
       });
     });
 });
